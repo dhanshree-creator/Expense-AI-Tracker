@@ -1,50 +1,194 @@
-# Smart Expense Tracker  — Smart Wallet 
+# 💰 Expense AI Tracker
 
-This is the upgraded version of your **FastAPI + Supabase + JWT** expense tracker.
+An AI-powered Expense Tracking & Budget Management System built with **FastAPI, React, and Supabase**. The application helps users manage income and expenses, monitor spending habits, set financial goals, and gain insights through interactive dashboards.
 
-## What is upgraded
+---
 
-- New Smart Wallet style dashboard inspired by your screenshot
-- Financial health score gauge out of 1000
-- Safe daily spending calculation
-- Top expense card
-- Recent combined transactions: income + expenses together
-- Better donut chart for category spending
-- Monthly income vs expense vs savings chart
-- Money insights panel with real warnings
-- Goals progress panel
-- Monthly category budgets with overspending alerts
-- Settings page with profile update, dark mode, monthly savings target, logout, reset local data, and delete account
-- Better expense/income tables with search, filters, summaries and CSV export
-- Backend endpoints added:
-  - `PUT /auth/profile`
-  - `DELETE /auth/account`
-  - `GET /reports/health`
-  - `GET /reports/recent-transactions`
-  - `GET /reports/category-breakdown?period=current_month`
+## 🚀 Features
 
-## Fast start
+### 🔐 User Authentication
 
-1. Run `docs/database.sql` in Supabase SQL Editor.
-2. Copy `backend/.env.example` to `backend/.env` and add your Supabase Project URL + service role key.
-3. Run:
+* User Registration
+* User Login
+* Secure Password Hashing
+* JWT-based Authentication
+
+### 💸 Expense Management
+
+* Add Expenses
+* Categorize Transactions
+* Track Spending History
+* Filter Expenses by Category and Date
+
+### 💵 Income Management
+
+* Add Income Sources
+* Monitor Monthly Income
+* Compare Income vs Expenses
+
+### 📊 Dashboard & Analytics
+
+* Total Income Overview
+* Total Expense Overview
+* Balance Calculation
+* Monthly Performance Tracking
+* Category-wise Expense Analysis
+* Recent Transactions
+
+### 🎯 Goal Tracking
+
+* Create Savings Goals
+* Track Goal Progress
+* Visual Progress Indicators
+
+### 🤖 AI Insights
+
+* Spending Pattern Analysis
+* Budget Recommendations
+* Financial Suggestions
+* Smart Expense Monitoring
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+* Javascript
+* HTML
+* CSS / Tailwind CSS
+
+### Backend
+
+* FastAPI
+* Python
+* JWT Authentication
+* Pydantic
+
+### Database
+
+* Supabase PostgreSQL
+---
+
+## ⚙️ Installation
+
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/dhanshree-creator/Expense-AI-Tracker.git
+cd Expense-AI-Tracker
+```
+
+### 2. Backend Setup
 
 ```bash
 cd backend
+
 python -m venv .venv
+
+# Windows
 .venv\Scripts\activate
+
 pip install -r requirements.txt
+```
+
+Create a `.env` file:
+
+```env
+SUPABASE_URL=your_supabase_url
+SUPABASE_SERVICE_ROLE_KEY=your_service_role_key
+SECRET_KEY=your_secret_key
+ALGORITHM=HS256
+ACCESS_TOKEN_EXPIRE_MINUTES=60
+```
+
+Start Backend:
+
+```bash
 uvicorn main:app --reload
 ```
 
-4. Open:
+Backend URL:
 
 ```text
 http://127.0.0.1:8000
 ```
 
-## Important
+---
 
-Goals, budgets, dark mode and monthly savings target are stored in browser `localStorage`, so they work without extra Supabase tables. Income and expenses are still stored in Supabase and protected by JWT.
+### 3. Frontend Setup
 
-For project submission, this is actually a good architecture choice: core financial records are database-backed, while dashboard preferences remain lightweight.
+```bash
+cd frontend
+
+npm install
+npm run dev
+```
+
+Frontend URL:
+
+```text
+http://localhost:5173
+```
+
+---
+
+## 🗄️ Database Setup
+
+Run the provided SQL schema in Supabase SQL Editor.
+
+Tables:
+
+* users
+* expenses
+* income
+
+The database uses UUID-based primary keys and foreign key relationships for secure data management.
+
+---
+
+## 📈 Dashboard Metrics
+
+* Total Income
+* Total Expenses
+* Current Balance
+* Monthly Spending Trends
+* Goal Progress Tracking
+* Expense Distribution
+
+---
+
+## 🔒 Security
+
+* Password Hashing
+* JWT Authentication
+* Protected API Endpoints
+* Row-Level Security (RLS) Enabled in Supabase
+* Environment Variables for Sensitive Data
+
+---
+
+## 🎯 Future Enhancements
+
+* AI Expense Forecasting
+* Export Reports (PDF/Excel)
+* Email Notifications
+* Multi-Currency Support
+* Recurring Transactions
+* Mobile Application
+* Advanced Financial Analytics
+
+---
+
+## 👩‍💻 Author
+
+**Dhanshree**
+
+GitHub:
+https://github.com/dhanshree-creator
+
+---
+
+## 📄 License
+
+This project is developed for educational and portfolio purposes.
