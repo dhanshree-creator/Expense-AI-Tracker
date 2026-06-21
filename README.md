@@ -1,4 +1,4 @@
-# Smart Expense Tracker Level 3 — Smart Wallet Upgrade
+# Smart Expense Tracker  — Smart Wallet 
 
 This is the upgraded version of your **FastAPI + Supabase + JWT** expense tracker.
 
