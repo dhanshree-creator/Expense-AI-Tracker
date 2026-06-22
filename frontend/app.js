@@ -448,7 +448,16 @@ function renderDashboardSkeleton(user) {
             </div>
             <canvas id="trendChart" height="310"></canvas>
           </div>
-        </div>
+        
+
+        <div class="panel chart-card" id="goalsPanel">
+            <div class="section-title">
+              <h2>Goals Progress</h2>
+              <a href="#/budget">Manage</a>
+            </div>
+            <div id="goalsList"></div>
+          </div>
+          </div>
 
         <aside class="right-column">
           <div class="panel" id="insightsPanel">
@@ -462,16 +471,10 @@ function renderDashboardSkeleton(user) {
               <a href="#/expenses">More</a>
             </div>
             <input class="search-input" id="txSearch" placeholder="Search transaction" />
-            <div id="recentTransactions" class="transaction-list"><p class="empty">Loading...</p></div>
+    cd        <div id="recentTransactions" class="transaction-list"><p class="empty">Loading...</p></div>
           </div>
 
-          <div class="panel" id="goalsPanel">
-            <div class="section-title tight">
-              <h2>Goals Progress</h2>
-              <a href="#/budget">Manage</a>
-            </div>
-            <div id="goalsList"></div>
-          </div>
+          
 
           <div class="panel" id="budgetWatchPanel">
             <div class="section-title tight">
